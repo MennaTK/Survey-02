@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta  charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/a66ad2a5d5.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=DM+Serif+Display&family=Rozha+One&family=Satisfy&family=Tiro+Bangla&display=swap" rel="stylesheet">
+    
+
+    <title>Survey Form</title>
+    
+  </head>
+
+  <body>
+    
+    <header>
+        
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Please take your time to fill this survey honestly and diligently.</p>
+      <p>Thank You</p>
+    </header>
+
+    <!--form-->
+    <form action="/action.php" id="survey-form" method="post">
+
+    <!--personal info-->
+      <fieldset class="personal">
+            <h2 class="subtitle">Personal Information</h2>         
+            <!--name-->
+
+            <section class="fullname">
+                <div class="">
+
+                    <label class="nlabel"for="first-name" id="name-label">Full Name</label>
+                    <input type="text" required  name="first-name" id="name"  class="name" placeholder="First Name">
+                
+
+                
+                    <input type="text" required name="name" id="second-name"  class="name" placeholder="Second Name">
+               
+
+               
+                    <input type="text" required name="last-name" id="last-name"class="name" placeholder="Last Name">
+                </div>
+            </section>
+
+
+            <!--age + email-->
+
+                <div id="birthdate">
+                    <label  class="nlabel date" for="date">Date of Birth</label>
+                    <input type="date" required name="date" id="date">
+                </div>
+ <!--dropdown1: country-->
+                <div class="countries">
+                    <p class="country">Country</p>
+
+                    <select  id="dropdown">
+                        <option value="">
+                            Select One
+                        </option>
+                        <option value="1">
+                            Egypt
+                        </option>
+                        <option value="2">
+                            USA
+                        </option>
+                        <option value="3">
+                            Australia
+                        </option>
+                        <option value="4">
+                            Other
+                        </option>
+                    </select>
+
+                    <div class="other">
+                        <p>If 'other' please mention it</p>
+                        <input type="text" name="Country" placeholder="Country">
+                    </div>
+
+                    
+                </div>
+<!--email-->
+                <div>
+                    <label  class="nlabel"for="email" id="email-label">E-mail</label>
+
+                    <input type="email" id="email" required name="email" class="block" placeholder="E-mail">
+                </div>
+
+        <!--Gender-->
+            <div class="">
+                <p>Gender :</p>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="male" checked>
+
+                    <i class="fa-solid fa-person" for="male"></i>
+
+                    <label for="male">Male</label>  
+                </div>
+                <div class="gender">
+                    <!--The value should be gender or is this correct?-->
+                    <input type="radio" id="female" name="gender" value="female">
+
+                    <i class="fa-solid fa-person-dress" for="female"></i>
+
+                    <label for="female">Female</label>
+                </div>  
+        
+            </div>
+                
+        
+     </fieldset>
+
+<!--additional questions:
+1. current job
+2. how many courses
+3. select courses
+4. comment-->
+
+     <fieldset class="additional">
+
+        <h2>Platform Questions</h2>
+       
+
+        <section class="jobQ">
+
+            <p class="job">What is your current job?</p>
+            
+            <select class="dropdown">
+                <option value="">
+                    Select one
+                </option>
+                <option value="1">
+                    Front-end developer
+                </option>
+                <option value="2">
+                    Back-end developer
+                </option>
+                <option value="3">
+                    Fullstack web developer
+                </option>
+                <option value="4">
+                    Other
+                </option>
+            </select>
+
+            <p>If you chose 'other' please write it down</p>
+            <input type="text" name="other" placeholder="Current job">
+
+        </section>
+
+            <div>
+                <label id="number-label">How many courses have you taken on our platform?</label><input type="number" min="1" max="6" id="number" placeholder="0" required>
+            </div>
+            
+            <div class="allcourse">
+                <p class="courses">
+                    Select all the courses you have taken on our platform:
+                </p>
+                <p class="faint">
+                    (You can select multiple courses)
+                </p>
+
+                <ul>
+                    <li>
+                        <input type="checkbox" id="responsive-web-design" name="responsive-web-design" value="responsive-web-design">
+                        <label for="responsive-web-design" name="responsive-web-design">responsive web design</label>
+        
+                    </li>
+                    <li>
+                        <input type="checkbox" id="javascript-algorithms" name="javascript-algorithms" value="javascript-algorithms">
+                        <label for="javascript-algorithms" name="javascript-algorithms">javascript algorithms and data structures</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="front-end-development-libraries" name="front-end-development-libraries" value="front-end-development-libraries">
+                        <label for="front-end-development-libraries" name="front-end-development-libraries">frontend development libraries</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="backend-development-and-APIs" name="backend-development-and-APIs" value="backend-development-and-APIs">
+                        <label for="backend-development-and-APIs"name="backend-development-and-APIs">backend development and APIs</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="data-analysis-with-python" name="data-analysis-with-python" value="data-analysis-with-python">
+                        <label for="data-analysis-with-python" name="data-analysis-with-python">data analysis with python</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="machine-learning-with-python" name="machine-learning-with-python" value="machine-learning-with-python">
+                        <label for="machine-learning-with-python"name="machine-learning-with-python">machine learning with python</label>
+                    </li>
+                </ul>
+
+                  
+            </div>
+
+            <div>
+                <p>If you have any comments on our courses, we will be glad to hear them</p>
+                <textarea id="comments" name="comments" placeholder="Your comments..." rows="10" cols="40"></textarea>
+            </div>
+
+            <button type="submit" id="submit"><a href="/action.php">Submit</a></button>
+
+            
+        
+                
+     </fieldset>
+
+</form>
+
+
+
+  </body>
+</html>
